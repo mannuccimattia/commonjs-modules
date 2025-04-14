@@ -1,9 +1,17 @@
-const myFullName = require("./names");
-const myHobbies = require("./hobbies");
-// const nome = "mario";
-// const cognome = "rossi"
+function getPerson() {
+  // const fullName = require("./names").fullNameObj();
+  // console.log("fullName:", fullName);
+  // const hobbies = require("./hobbies").hobbiesArr();
+  // console.log("hobbies:", hobbies);
 
-const output = myFullName.fullNameObj();
-console.log(output);
-const output2 = myHobbies.hobbiesArr();
-console.log(output2);
+  const fullName = require("./names").fullNameObj("Mario", "Rossi");
+  console.log("fullName:", fullName);
+  const hobbies = require("./hobbies").hobbiesArr("Games", "Music", "Cooking");
+  console.log("hobbies:", hobbies);
+
+  return {
+    fullName: `${fullName.firstName} ${fullName.lastName}`,
+    hobbies
+  }
+}
+console.log("Person:", getPerson());
