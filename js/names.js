@@ -3,4 +3,4 @@ function fullNameObj(firstName, lastName){
   return {firstName, lastName}
 };
 
-module.exports = {fullName}
+module.exports = {fullNameObj}
